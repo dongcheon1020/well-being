@@ -78,6 +78,7 @@ html {
   font-size: var(--headlign-fz);
   line-height: 250px;
   color: var(--white-color);
+  font-family: var(--R-fs);
 }
 .hero-container p {
   font-size: 20px;
@@ -93,7 +94,7 @@ html {
 
 .hero-container:nth-child(2) p {
   text-align: right;
-  margin-right: 700px;
+  margin-right: 710px;
 }
 .hero-title {
   white-space: inherit;
@@ -208,6 +209,7 @@ html {
   top: calc(100% - 50% - 556px / 2);
   object-fit: cover;
   border-radius: 18px;
+  /* filter: grayscale(1); */
 }
 /* content2 */
 .content2 {
@@ -325,8 +327,31 @@ html {
   height: 1672px;
   width: 1440px;
   gap: 20px;
+  row-gap: 70px;
   display: flex;
   flex-wrap: wrap;
+}
+.hidden-box {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.changebt {
+  z-index: 999;
+  position: relative;
+  transform-origin: 50% 50%;
+  transition: all 0.3s ease;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}
+.changebt img {
+  width: 30px;
+  height: 30px;
 }
 /* box1 */
 .content2 .body .center section .bigbox:nth-child(1) {
@@ -468,6 +493,7 @@ html {
   margin: auto;
   color: #dedede;
   transition: all 01s ease;
+  font-family: var(--R-fs);
 }
 .content3 .page {
   width: 100vw;
@@ -496,6 +522,7 @@ html {
   text-align: center;
   width: 944px;
   height: 172px;
+  font-family: var(--R-fs);
 }
 .content3 .page .bg2 {
   height: 980px;

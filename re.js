@@ -33,7 +33,7 @@ $(document).ready(function () {
       });
     } else if (sc > 1376 && sc < 2163) {
       $(".hero-container:nth-child(1)").css({
-        transform: "translateX(-450px)",
+        transform: "translateX(-420px)",
       });
     }
     // heroContainer 2
@@ -49,9 +49,9 @@ $(document).ready(function () {
       $(".hero-container:nth-child(2)").css({
         transform: "translateX(" + heroContainerRight + "px)",
       });
-    } else if (sc > 1376 && sc < 2163) {
+    } else if (sc > 1376 && sc < 2000) {
       $(".hero-container:nth-child(2)").css({
-        transform: "translateX(620px)",
+        transform: "translateX(540px)",
       });
     }
     // herosection-opacity
@@ -145,6 +145,15 @@ $(document).ready(function () {
         opacity: "0",
       });
     }
+    // view
+    let viewSc = sc - 3155;
+    $(".sc").text(viewSc);
+    let videoTime = $(".view-box video").get(0).duration;
+    let videoPlay = (viewSc / 1390) * videoTime;
+    if (viewSc > 0 && viewSc < 1386) {
+      $(".view-box video").get(0).currentTime = videoPlay;
+    }
+
     // conent2
     $(".changebg > ul > li").click(function () {
       let btIndex = $(this).index();
@@ -207,7 +216,7 @@ $(document).ready(function () {
       $(".content2").height() -
       $(".content3").height() -
       $(".content4").height();
-    $(".sc").text(content5Sc);
+    // $(".sc").text(content5Sc);
 
     if (content5Sc > 0 && content5Sc < 1180) {
       let c5ratio = content5Sc / 1180;
@@ -237,7 +246,7 @@ $(document).ready(function () {
     }
     // content6
     let con6Sc = content5Sc - $(".contetn5").height();
-    $(".sc").text(con6Sc);
+    // $(".sc").text(con6Sc);
     if (con6Sc > 0) {
       c6S = $(".contetn6 .container").css({
         transform: "translateX(" + -con6Sc + "px)",
@@ -303,6 +312,35 @@ $(document).ready(function () {
       arrowR = 0;
     }
     $(".content4 .viewmore-container").slideToggle();
+  });
+  let rot = 0;
+  let btOn = true;
+
+  $(".changebt").click(function () {
+    // bt
+    if (btOn == true) {
+      btOn = false;
+    } else {
+      btOn = true;
+    }
+
+    if (btOn == true) {
+      $(this).css({
+        transform: "rotate(45deg)",
+      });
+    } else {
+      $(this).css({
+        transform: "rotate(0deg)",
+      });
+    }
+    rot += 45;
+
+    // hidden-box
+    if ($(this).css.transform) {
+      $(this).siblings(".hidden-box").css({
+        opacity: "1",
+      });
+    }
   });
 });
 // 화면 100vw 100vh까지 확대 시키는거 그거 px에서 vw로 단위 변경해야됌
