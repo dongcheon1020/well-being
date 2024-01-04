@@ -316,11 +316,13 @@ html {
   width: 888px;
   height: 826px;
   background-color: var(--black-color);
+  position: relative;
 }
 .content2 .body .center .smallbox {
   width: 532px;
   height: 826px;
   background-color: var(--white-color);
+  position: relative;
 }
 
 .content2 .body .center section {
@@ -334,11 +336,19 @@ html {
 .hidden-box {
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: var(--orange-color);
   position: absolute;
   border-radius: 10px;
   opacity: 0;
   transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+}
+.hidden-box h5 {
+  font-size: var(--subtitle-fz);
+  color: var(--white-color);
 }
 .changebt {
   z-index: 999;
@@ -352,6 +362,24 @@ html {
 .changebt img {
   width: 30px;
   height: 30px;
+}
+.morebt {
+  z-index: 99;
+  position: relative;
+}
+.morebt-close {
+  display: none;
+  z-index: 99;
+  position: relative;
+}
+.smallbox > .hidden-box {
+  padding: 63px;
+  box-sizing: border-box;
+}
+.smallbox > .hidden-box .scrollbox {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 /* box1 */
 .content2 .body .center section .bigbox:nth-child(1) {
@@ -404,6 +432,7 @@ html {
   font-size: var(--subtitle-fz);
   font-weight: bold;
 }
+
 /* box2 */
 .content2 .body .center section .smallbox:nth-child(2) {
   position: relative;
@@ -411,7 +440,7 @@ html {
 .content2 .body .center section .smallbox:nth-child(2) p {
   font-size: var(--description-fz);
 }
-.content2 .body .center section .smallbox:nth-child(2) button {
+.content2 .body .center section .smallbox:nth-child(2) .morebt-show {
   font-size: var(--description-fz);
   color: var(--orange-color);
   background-color: transparent;
@@ -425,7 +454,7 @@ html {
   bottom: 63px;
   cursor: pointer;
 }
-.content2 .body .center section .smallbox:nth-child(2) button::after {
+.content2 .body .center section .smallbox:nth-child(2) .morebt-show::after {
   content: url(images/aorw.svg);
   display: inline-block;
   padding-left: 5.7px;
@@ -435,6 +464,25 @@ html {
   font-weight: bold;
   position: relative;
   top: 2px;
+}
+.morebt-close {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  color: var(--white-color);
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease;
+}
+.morebt-close:hover {
+  transform: translateX(-3px);
 }
 /* box3 */
 .content2 .body .center section .smallbox:nth-child(3) h1 {

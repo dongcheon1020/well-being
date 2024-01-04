@@ -314,31 +314,102 @@ $(document).ready(function () {
     $(".content4 .viewmore-container").slideToggle();
   });
   let rot = 0;
-  let btOn = true;
+  let btOn1 = false;
+  let btOn2 = false;
+  let btOn3 = false;
 
-  $(".changebt").click(function () {
+  $(".changebt1").click(function () {
     // bt
-    if (btOn == true) {
-      btOn = false;
+    if (btOn1 == true) {
+      btOn1 = false;
     } else {
-      btOn = true;
+      btOn1 = true;
     }
 
-    if (btOn == true) {
+    if (btOn1 == true) {
       $(this).css({
         transform: "rotate(45deg)",
+      });
+      $(this).siblings(".hidden-box").css({
+        opacity: "1",
       });
     } else {
       $(this).css({
         transform: "rotate(0deg)",
       });
+      $(this).siblings(".hidden-box").css({
+        opacity: "0",
+      });
     }
-    rot += 45;
+  });
+  $(".changebt2").click(function () {
+    // bt
+    if (btOn2 == true) {
+      btOn2 = false;
+    } else {
+      btOn2 = true;
+    }
 
-    // hidden-box
-    if ($(this).css.transform) {
+    if (btOn2 == true) {
+      $(this).css({
+        transform: "rotate(45deg)",
+      });
       $(this).siblings(".hidden-box").css({
         opacity: "1",
+      });
+    } else {
+      $(this).css({
+        transform: "rotate(0deg)",
+      });
+      $(this).siblings(".hidden-box").css({
+        opacity: "0",
+      });
+    }
+  });
+  $(".changebt3").click(function () {
+    // bt
+    if (btOn3 == true) {
+      btOn3 = false;
+    } else {
+      btOn3 = true;
+    }
+
+    if (btOn3 == true) {
+      $(this).css({
+        transform: "rotate(45deg)",
+      });
+      $(this).siblings(".hidden-box").css({
+        opacity: "1",
+      });
+    } else {
+      $(this).css({
+        transform: "rotate(0deg)",
+      });
+      $(this).siblings(".hidden-box").css({
+        opacity: "0",
+      });
+    }
+  });
+  let morebt = false;
+  $(".morebt").click(function () {
+    // bt
+    if (morebt == true) {
+      morebt = false;
+    } else {
+      morebt = true;
+    }
+
+    if (morebt == true) {
+      $(".morebt-show").hide();
+      $(".morebt-close").show();
+      $(this).siblings(".hidden-box").css({
+        opacity: "1",
+      });
+    } else {
+      $(".morebt-show").show();
+      $(".morebt-close").hide();
+      $(this).siblings(".hidden-box").css({
+        opacity: "0",
       });
     }
   });
