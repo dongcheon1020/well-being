@@ -207,44 +207,40 @@ $(document).ready(function () {
       $(".content2").height() -
       $(".content3").height() -
       $(".content4").height();
-    if (content5Sc > 0 && content5Sc < 14789) {
-      // viewbox sizup
-      let newWidth = 740 + content5Sc / 1.21;
-      let newHeight = 348 + content5Sc / 1.92;
+    $(".sc").text(content5Sc);
 
-      let vw = Math.max(
-        document.documentElement.clientWidth || 0,
-        window.innerWidth || 0
-      );
-      let vh = Math.max(
-        document.documentElement.clientHeight || 0,
-        window.innerHeight || 0
-      );
-      if (newWidth > vw) {
-        newWidth = vw;
-      }
-      if (newHeight > vh) {
-        newHeight = vh;
-      }
-      let calcWidth = Math.max(100, 180 - content5Sc / 15);
-      let calcHeight = Math.max(100, 180 - content5Sc / 15);
-      let BgSize = `calc(${calcWidth}vw) calc(${calcHeight}vh)`;
+    if (content5Sc > 0 && content5Sc < 1180) {
+      let c5ratio = content5Sc / 1180;
+      let c5vwValue = 40 + 60 * c5ratio;
+      let c5bg = 180 - 80 * c5ratio;
 
       $(".contetn5 .sticky .viewbox ").css({
-        width: newWidth,
-        height: newHeight,
-        backgroundSize: BgSize,
+        width: c5vwValue + "vw",
+        height: c5vwValue + "vh",
+        backgroundSize: c5bg + "vw " + c5bg + "vh",
+        borderRadius: "18px",
+      });
+    } else if (content5Sc < 0) {
+      $(".contetn5 .sticky .viewbox ").css({
+        width: "40vw",
+        height: "40vh",
+        backgroundSize: "180vw 180vh",
+        borderRadius: "18px",
       });
     } else {
       $(".contetn5 .sticky .viewbox ").css({
-        width: "740px",
-        height: "348px",
-        backgroundSize: "calc(180vw) calc(180vh)",
+        width: "100vw",
+        height: "100vh",
+        backgroundSize: "cover",
+        borderRadius: "0",
       });
     }
-  });
-  let arrowR = 180;
 
+    // scroll end
+  });
+
+  //  버튼
+  let arrowR = 180;
   $(".content4 .viewmore").click(function () {
     arrowR += 180;
     $(".content4 .arrow ").css({
@@ -256,3 +252,8 @@ $(document).ready(function () {
     $(".content4 .viewmore-container").slideToggle();
   });
 });
+// 화면 100vw 100vh까지 확대 시키는거 그거 px에서 vw로 단위 변경해야됌
+// 동영상 사진 하나 준비
+// 동영상은 스크롤 시 프레임 단위로 재생
+// 사진은 아래쪽이 흰 이미지 찾기 (기하학적)
+// content6 백그라운드 화이트에 선이 스크롤 하면 오른쪽이로 이동하면서 글 등 footer
