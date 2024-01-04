@@ -698,32 +698,99 @@ html {
   height: 10000px;
   background-color: var(--main-bg-white-color);
   position: relative;
-  background-color: darkseagreen;
 }
 .contetn6 .center {
   height: 100vh;
   width: 1440px;
   margin: auto;
   position: sticky;
-  overflow-x: hidden;
-  overflow-y: visible;
   top: 0;
-  background-color: yellow;
 }
 .contetn6 .center .container {
   width: 8740px;
-  height: 100vh;
-  background-color: orange;
+  height: 1080px;
+  transition: all 0.3s cubic-bezier(0.31, 0.83, 0.34, 0.86);
 }
-.contetn6 img {
+.contetn6 .grap {
   position: absolute;
   margin: auto;
   left: 11px;
   top: -522px;
   background: none;
   pointer-events: none;
+  z-index: 99;
+}
+.contetn6 .description {
+  position: absolute;
+  font-size: var(--subtitle-fz);
+  color: var(--black-color);
+  font-family: var(--R-fs);
+  font-weight: normal;
 }
 
+.contetn6 .description1 {
+  top: 300px;
+  left: 1000px;
+}
+.contetn6 .description2 {
+  top: 720px;
+  left: 3200px;
+}
+.contetn6 .description3 {
+  top: 480px;
+  left: 5080px;
+}
+.contetn6 .description4 {
+  top: 550px;
+  left: 6900px;
+}
+.contetn6 .title {
+  position: absolute;
+  font-size: 170px;
+  color: var(--blue-color);
+  font-family: var(--R-fs);
+}
+.contetn6 .title1 {
+  top: 400px;
+  left: 100px;
+}
+.contetn6 .title2 {
+  top: 290px;
+  left: 2000px;
+}
+.contetn6 .title3 {
+  top: 100px;
+  left: 4000px;
+}
+.contetn6 .title4 {
+  top: 220px;
+  left: 6000px;
+}
+.contetn6 .c6i {
+  position: absolute;
+  transform-origin: 100% 100%;
+  transition: all 0.5s;
+}
+.contetn6 .c6i:active {
+  transform: rotate(50deg);
+}
+.contetn6 .c6i1 {
+  top: 400px;
+  left: 100px;
+}
+
+.contetn6 .c6i2 {
+  top: 290px;
+  left: 2000px;
+}
+.contetn6 .c6i3 {
+  top: 100px;
+  left: 4000px;
+}
+.contetn6 .c6i4 {
+  top: 220px;
+  left: 6000px;
+}
 /* animate */
 @keyframes ap {
   0% {

@@ -235,7 +235,60 @@ $(document).ready(function () {
         borderRadius: "0",
       });
     }
-
+    // content6
+    let con6Sc = content5Sc - $(".contetn5").height();
+    $(".sc").text(con6Sc);
+    if (con6Sc > 0) {
+      c6S = $(".contetn6 .container").css({
+        transform: "translateX(" + -con6Sc + "px)",
+      });
+    } else {
+      c6S = $(".contetn6 .container").css({
+        transform: "translateX(0px)",
+      });
+    }
+    if (con6Sc > 10 && con6Sc < 1647) {
+      $(".contetn6 .c6i").css({
+        transform: "translateY(0px)",
+        filter: "grayscale(0)",
+      });
+      $(".contetn6 .c6i1").css({
+        transform: "translateY(200px)",
+        filter: "grayscale(1)",
+      });
+    } else if (con6Sc > 1647 && con6Sc < 3623) {
+      $(".contetn6 .c6i").css({
+        transform: "translateY(0px)",
+        filter: "grayscale(0)",
+      });
+      $(".contetn6 .c6i2").css({
+        transform: "translateY(200px)",
+        filter: "grayscale(1)",
+      });
+    } else if (con6Sc > 3623 && con6Sc < 5625) {
+      $(".contetn6 .c6i").css({
+        transform: "translateY(0px)",
+        filter: "grayscale(0)",
+      });
+      $(".contetn6 .c6i3").css({
+        transform: "translateY(200px)",
+        filter: "grayscale(1)",
+      });
+    } else if (con6Sc > 5625 && con6Sc < 10000) {
+      $(".contetn6 .c6i").css({
+        transform: "translateY(0px)",
+        filter: "grayscale(0)",
+      });
+      $(".contetn6 .c6i4").css({
+        transform: "translateY(200px)",
+        filter: "grayscale(1)",
+      });
+    } else {
+      $(".contetn6 .c6i").css({
+        transform: "translateY(0px)",
+        filter: "grayscale(0)",
+      });
+    }
     // scroll end
   });
 
