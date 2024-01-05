@@ -648,13 +648,13 @@ html {
 }
 .content4 .textbox .title {
   width: 483px;
-  height: 100%;
+  height: 200px;
   color: var(--black-color);
   font-size: var(--subtitle-fz);
 }
 .content4 .textbox .description {
   width: 855px;
-  height: 100%;
+  height: 200px;
   color: var(--black-color);
   font-size: var(--description-fz);
 }
