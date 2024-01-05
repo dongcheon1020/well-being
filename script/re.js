@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $(window).scrollTop(0);
   $(".content4 .viewmore-container").css({
     display: "none",
   });
@@ -426,4 +427,7 @@ $(document).ready(function () {
       });
     }
   );
+});
+$(winodw).on("load", function () {
+  $(winodw).scrollTop(0);
 });
