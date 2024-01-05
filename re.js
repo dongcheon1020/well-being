@@ -413,9 +413,17 @@ $(document).ready(function () {
       });
     }
   });
+  // hover
+  $(".content2 .body .center section .bigbox:nth-child(4) .title").hover(
+    function () {
+      $(this).next(".description").css({
+        color: "var(--white-color)",
+      });
+    },
+    function () {
+      $(this).next(".description").css({
+        color: "var(--black-gray-color)",
+      });
+    }
+  );
 });
-// 화면 100vw 100vh까지 확대 시키는거 그거 px에서 vw로 단위 변경해야됌
-// 동영상 사진 하나 준비
-// 동영상은 스크롤 시 프레임 단위로 재생
-// 사진은 아래쪽이 흰 이미지 찾기 (기하학적)
-// content6 백그라운드 화이트에 선이 스크롤 하면 오른쪽이로 이동하면서 글 등 footer
