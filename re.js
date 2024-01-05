@@ -218,8 +218,8 @@ $(document).ready(function () {
       $(".content4").height();
     // $(".sc").text(content5Sc);
 
-    if (content5Sc > 0 && content5Sc < 1180) {
-      let c5ratio = content5Sc / 1180;
+    if (content5Sc > 0 && content5Sc < 1100) {
+      let c5ratio = content5Sc / 1100;
       let c5vwValue = 40 + 60 * c5ratio;
       let c5bg = 180 - 80 * c5ratio;
 
