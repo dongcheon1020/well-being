@@ -181,11 +181,11 @@ $(document).ready(function () {
     if (content3Sc > 0 && sc < 8369) {
       $(".content3 .sticky .headlign").css({
         transform: "translateY(" + -content3Sc + "px)",
-        color: "#E30000",
+        color: "var(--orange-color)",
       });
     } else if (sc > 8369 && sc < 11000) {
       $(".content3 .sticky .headlign").css({
-        color: "#E30000",
+        color: "var(--orange-color)",
       });
     } else {
       $(".content3 .sticky .headlign").css({
