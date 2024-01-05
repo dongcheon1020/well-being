@@ -911,6 +911,7 @@ html {
 .footer-container .content {
   width: 1440px;
   height: 740px;
+  margin-bottom: 50px;
 }
 .footer-container .content ul {
   list-style: none;
@@ -1014,7 +1015,7 @@ html {
 }
 footer {
   width: 1440px;
-  height: 118px;
+  height: 130px;
   border-top: 1px solid var(--bolder-color);
   display: flex;
   padding-top: 17px;
