@@ -971,6 +971,7 @@ html {
 
   transition-property: 200000px;
   transition: all 0.8s cubic-bezier(0.54, 0.5, 0.51, 1.35);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.016);
 }
 .footer-container .content .tools .show {
   background-color: var(--white-color);
